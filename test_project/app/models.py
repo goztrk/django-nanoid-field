@@ -4,10 +4,5 @@ from nanoid_field import NanoidField
 
 
 class Test(models.Model):
-    id = NanoidField()
-    override = NanoidField(
-        alphabet="123456789",
-        size=2,
-        primary_key=False,
-        editable=True
-    )
+    id = NanoidField(primary_key=True, editable=False)
+    override = NanoidField(alphabet="123456789", max_length=2)
