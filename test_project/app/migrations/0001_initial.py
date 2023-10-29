@@ -5,18 +5,30 @@ import nanoid_field.fields
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Test',
+            name="Test",
             fields=[
-                ('id', nanoid_field.fields.NanoidField(default=nanoid_field.fields.NanoidField.nanoid, editable=False, max_length=21, primary_key=True, serialize=False)),
-                ('override', nanoid_field.fields.NanoidField(default=nanoid_field.fields.NanoidField.nanoid, max_length=2)),
+                (
+                    "id",
+                    nanoid_field.fields.NanoidField(
+                        default=nanoid_field.fields.NanoidField.nanoid,
+                        editable=False,
+                        max_length=21,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                (
+                    "override",
+                    nanoid_field.fields.NanoidField(
+                        default=nanoid_field.fields.NanoidField.nanoid, max_length=2
+                    ),
+                ),
             ],
         ),
     ]
