@@ -1,1 +1,1 @@
-# django-nanoid-field
+# Django NanoID Field
