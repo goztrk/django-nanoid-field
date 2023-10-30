@@ -4,8 +4,22 @@ version = "0.1.0"
 license = { text = "MIT" }
 authors = [{ name = "Gokhan Ozturk", email = "me@gokhan.org.tr" }]
 description = "Next generation NanoID in Django Model IDs"
+keywords = ['django', 'nanoid', 'django-field']
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+]
 readme = "README.md"
 dependencies = ["nanoid", "django>=2"]
+
+[project.urls]
+Homepage = "https://github.com/goztrk/django-nanoid-field"
+Documentation = "https://github.com/goztrk/django-nanoid-field"
+Repository = "https://github.com/goztrk/django-nanoid-field.git"
 
 [build-system]
 requires = ["setuptools"]
