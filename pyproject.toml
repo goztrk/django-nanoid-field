@@ -1,6 +1,5 @@
 [project]
 name = "django-nanoid-field"
-version = "0.1.0"
 license = { text = "MIT" }
 authors = [{ name = "Gokhan Ozturk", email = "me@gokhan.org.tr" }]
 description = "Next generation NanoID in Django Model IDs"
@@ -15,6 +14,7 @@ classifiers = [
 ]
 readme = "README.md"
 dependencies = ["nanoid", "django>=2"]
+dynamic = ["version"]
 
 [project.urls]
 Homepage = "https://github.com/goztrk/django-nanoid-field"
@@ -27,3 +27,6 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = ["nanoid_field"]
+
+[tool.setuptools.dynamic]
+version = { attr = "nanoid_field.__version__" }
