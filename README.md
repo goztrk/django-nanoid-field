@@ -4,6 +4,11 @@ NanoID is an alternative to UUID, CUID for generating random IDs. This package
 provides a field to use in models.
 
 
+## Roadmap
+
+- [ ] Create `AutoField` that uses NanoID instead of regular integer ID.
+
+
 ## Installation
 
 Install it from PyPI:
@@ -63,10 +68,6 @@ build up.
 
 
 ## Using NanoidField as `primary_key`
-
-Currently Django Auto Field feature does not allow using fields other than
-Integer based fields. Until this ability changes you cannot use this as AutoField.
-
 To use NanoID as default `primary_key` you need to explicitly define it in your
 model:
 
