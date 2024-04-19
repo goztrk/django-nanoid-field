@@ -23,5 +23,5 @@ class NanoidField(models.CharField):
     def nanoid(self):
         return generate(self.alphabet, self.max_length)
 
-    def db_type(self, connection):
-        return 'varchar({})'.format(self.max_length)
+    def get_internal_type(self):
+        return "CharField"
