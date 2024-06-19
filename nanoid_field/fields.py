@@ -25,3 +25,11 @@ class NanoidField(models.CharField):
 
     def get_internal_type(self):
         return "CharField"
+
+    def deconstruct(self):
+        name, path, args, kwargs = super().deconstruct()
+        kwargs['alphabet'] = self.alphabet
+        kwargs['max_length'] = self.max_length
+        kwargs.pop('default', None)
+
+        return name, path, args, kwargs
